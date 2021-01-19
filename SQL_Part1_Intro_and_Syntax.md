@@ -1,6 +1,6 @@
 # Beginners SQL Part 1 Introduction and Syntax #
 
-## Last Edited: 14-01-2021
+## Last Edited: 19-01-2021
 -------------------------------------------------------------------------------
 ## Introduction
 
@@ -14,40 +14,31 @@ To build a website that shows data from a database, you will need:
 - to use SQL to obtain the data you want to show
 - to use HTML / CSS to style the page
 
-## SQL Statements
+# SQL Statements
+Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines. Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
 
-SQL statements include special keywords that allow you to perform a variety of actions on your database. They are not case-sensitive. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server.
-
-A list of the most important ones are below. 
+## SQL Keywords
+SQL statements include special keywords that allow you to perform a variety of actions on your database. They are not case-sensitive, but it can often help distinguish them from other objects if that are written in capitals.  A list of some of the most important keywords are below. 
 
 ### SELECT
 > extracts data from a database
-~~~
-SELECT [*] FROM [table]; # Asterix means everything
-~~~
 ### UPDATE 
 > updates data in a database
-
 ### DELETE 
 > inserts new data into a database
-
 ### CREATE DATABASE 
 > creates a new database
-
 ### ALTER DATABASE 
 > modifies a database
-
 ### CREATE TABLE 
 > creates a new table
-
 ### ALTER TABLE 
 > modifies a table
-
 ### DROP TABLE 
 > deletes a table
-
 ### CREATE INDEX 
 > creates an index (search key)
-
-###  DROP INDEX 
+### DROP INDEX 
 > deletes an index
+
+## SQL Operators
