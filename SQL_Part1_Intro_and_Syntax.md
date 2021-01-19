@@ -16,11 +16,15 @@ To build a website that shows data from a database, you will need:
 
 ## SQL Statements
 
-SQL statements are special keywords that allow you to perform a variety of actions on your database.  They are not case-sensitive. A list of the most important ones are below. 
+SQL statements include special keywords that allow you to perform a variety of actions on your database. They are not case-sensitive. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server.
+
+A list of the most important ones are below. 
 
 ### SELECT
 > extracts data from a database
-
+~~~
+SELECT [*] FROM [table]; # Asterix means everything
+~~~
 ### UPDATE 
 > updates data in a database
 
