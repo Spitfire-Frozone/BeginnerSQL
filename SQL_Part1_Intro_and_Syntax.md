@@ -31,7 +31,9 @@ Each component of what can appear in a SQL Statement will be outlined below. For
 
 ## SQL Keywords
 SQL statements include special keywords that allow you to perform a variety of actions on your database. They are not case-sensitive, but it can often help distinguish them from other objects if that are written in capitals.  A list of some of the most important keywords are below. 
-
+<details>
+  <summary>Click to expand!</summary>
+  
 ### SELECT
 > extracts data from a database
 ### UPDATE 
@@ -53,8 +55,13 @@ SQL statements include special keywords that allow you to perform a variety of a
 ### DROP INDEX 
 > deletes an index
 
+</details>
+
 ## SQL Clauses
-An SQL clause is used to qualify a keyword, allowing those that only fulfil certain conditions to be obtained. Clauses can also be used to group or order search results. 
+An SQL clause is used to qualify a keyword, allowing those that only fulfil certain conditions to be obtained. Clauses can also be used to group or order search results. A list of some of more common ones can be seen in the expandable list below. 
+
+<details>
+  <summary>Click to expand!</summary>
 
 ### WHERE
 > filters records such that only those that fulfill a specified condition are extracted
@@ -66,5 +73,7 @@ An SQL clause is used to qualify a keyword, allowing those that only fulfil cert
 > groups records that share the same values into summary rows
 ### TOP, LIMIT or ROWNUM
 > specifies the number of records to return
+
+</details>
 
 ## SQL Operators
