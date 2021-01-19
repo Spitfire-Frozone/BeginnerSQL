@@ -15,7 +15,19 @@ To build a website that shows data from a database, you will need:
 - to use HTML / CSS to style the page
 
 # SQL Statements
-Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines. Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
+Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, clauses, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines such that all three statements below are syntaxically valid. 
+
+~~~
+SELECT [field(s)] FROM [table]; 
+
+SELECT [field(s)] FROM [table] 
+
+SELECT [field(s)] 
+FROM [table]; 
+
+~~~
+
+Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
 
 ## SQL Keywords
 SQL statements include special keywords that allow you to perform a variety of actions on your database. They are not case-sensitive, but it can often help distinguish them from other objects if that are written in capitals.  A list of some of the most important keywords are below. 
@@ -40,5 +52,19 @@ SQL statements include special keywords that allow you to perform a variety of a
 > creates an index (search key)
 ### DROP INDEX 
 > deletes an index
+
+## SQL Clauses
+An SQL clause is used to qualify a keyword, allowing those that only fulfil certain conditions to be obtained. Clauses can also be used to group or order search results. 
+
+### WHERE
+> filters records such that only those that fulfill a specified condition are extracted
+### HAVING
+> filters aggregate records (groups) such that only those that fulfill a specified condition are extracted
+### ORDER BY
+> orders search results
+### GROUP BY
+> groups records that share the same values into summary rows
+### TOP, LIMIT or ROWNUM
+> specifies the number of records to return
 
 ## SQL Operators
