@@ -18,27 +18,25 @@ To build a website that shows data from a database, you will need:
 
 SQL statements are special keywords that allow you to perform a variety of actions on your database.  They are not case-sensitive. A list of the most important ones are below. 
 
-~~~
-SELECT
+> SELECT
 	> extracts data from a database
-UPDATE 
+> UPDATE 
 	> updates data in a database
-DELETE 
+> DELETE 
 	> deletes data from a database
-INSERT INTO
+> INSERT INTO
 	> inserts new data into a database
-CREATE DATABASE 
+> CREATE DATABASE 
 	> creates a new database
-ALTER DATABASE 
+> ALTER DATABASE 
 	> modifies a database
-CREATE TABLE 
+> CREATE TABLE 
 	> creates a new table
-ALTER TABLE 
+> ALTER TABLE 
 	> modifies a table
-DROP TABLE 
+> DROP TABLE 
 	> deletes a table
-CREATE INDEX 
+> CREATE INDEX 
 	> creates an index (search key)
-DROP INDEX 
+> DROP INDEX 
 	> deletes an index
-~~~
