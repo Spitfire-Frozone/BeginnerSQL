@@ -15,7 +15,7 @@ To build a website that shows data from a database, you will need:
 - to use HTML / CSS to style the page
 
 # SQL Statements
-Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, clauses, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines such that all three statements below are syntaxically valid. 
+Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, clauses, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines such that all four statements below are syntaxically valid. 
 
 ~~~
 SELECT [field(s)] FROM [table]; 
@@ -25,6 +25,8 @@ SELECT [field(s)] FROM [table]
 SELECT [field(s)] 
 FROM [table]; 
 
+SELECT [field(s)] 
+FROM [table]
 ~~~
 
 Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
