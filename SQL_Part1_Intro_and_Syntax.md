@@ -123,12 +123,12 @@ Does what it says on the tin. These are the set of operators that allow you to c
 <details>
   <summary>Click to expand!</summary>
 
-### =	Equal to	
-### >	Greater than	
-### <	Less than	
-### >=	Greater than or equal to	
-### <=	Less than or equal to	
-### <>	Not equal to
+#### =	Equal to	
+#### >	Greater than	
+#### <	Less than	
+#### >=	Greater than or equal to	
+#### <=	Less than or equal to	
+#### <>	Not equal to
 
 </details>
 
