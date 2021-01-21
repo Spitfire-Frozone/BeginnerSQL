@@ -133,41 +133,37 @@ This is the generic
 </details>
 
 ### Arithmetic Operators.
-This is the generic 
+SQL can be used to do simple arithmetic, and for that the operators you would normally use for simple sums are used here. There is a catch. Since SQL doesn't have an express type attribute for items returned values may not be correct (this is mainly only a concern if the division operator is being used). If the input is all integers for example, it will always output an integer and any remainders will be discarded. Since SQL automatically detects number types, a float can always be specified by entering a number with a decimal point. i.e 30.0 instead of 30. If any one of the numbers in a calculation is a float, however, the a answer will be a float.
+
 <details>
   <summary>Click to expand!</summary>
 
-### WHERE
-> filters records such that only those that fulfill a specified condition are extracted
-### HAVING
-> filters aggregate records (groups) such that only those that fulfill a specified condition are extracted
-### ORDER BY
-> orders search results
-### GROUP BY
-> groups records that share the same values into summary rows
-### TOP, LIMIT or ROWNUM
-> specifies the number of records to return
+### +	Add	
+### -	Subtract	
+### *	Multiply	
+### /	Divide	
+> Divides two numbers together but retains the variable type. 
+### %	Modulo
+> When A % B. The modulo operation prints the remainder when B divides into A. This is only reliable for integers. If floats are input, they are rounded down to the nearest integer before the calculation is done. 
 
 </details>
 
 ### Bitwise Operators.
-These are rare. 
+These are rarely used as it's not often that individual bits want to be manipulated. An example could be if you wanted to check individual bits in a binary number. 
 <details>
   <summary>Click to expand!</summary>
 
-### &
-> bitwise AND
-### |
-> bitwise OR
-### ^
-> bitwise exculsive OR
+### & - bitwise AND
+> 
+### | - bitwise OR
+> 
+### ^ - bitwise exculsive OR
+>
 
 </details>
 
-:shipit:
-~~~
+:gem::gem::gem:
+
 Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.    
-~~~
-:shipit:
 
 ## SQL Functions
