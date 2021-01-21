@@ -29,6 +29,8 @@ SELECT [field(s)]
 FROM [table]
 ~~~
 
+:gem::gem: Comments are made with two dashed lines -- :gem::gem:
+
 Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
 
 ## SQL Keywords
@@ -117,20 +119,16 @@ A logical operator is used to further discriminate search results in a clause. E
 </details>
 
 ### Comparison Operators.
-This is the generic 
+Does what it says on the tin. These are the set of operators that allow you to compare domains. You are already familiar most of these 
 <details>
   <summary>Click to expand!</summary>
 
-### WHERE
-> filters records such that only those that fulfill a specified condition are extracted
-### HAVING
-> filters aggregate records (groups) such that only those that fulfill a specified condition are extracted
-### ORDER BY
-> orders search results
-### GROUP BY
-> groups records that share the same values into summary rows
-### TOP, LIMIT or ROWNUM
-> specifies the number of records to return
+### =	Equal to	
+### >	Greater than	
+### <	Less than	
+### >=	Greater than or equal to	
+### <=	Less than or equal to	
+### <>	Not equal to
 
 </details>
 
@@ -151,7 +149,7 @@ SQL can be used to do simple arithmetic, and for that the operators you would no
 </details>
 
 ### Bitwise Operators.
-These are rarely used as it's not often that individual bits want to be manipulated. An example could be if you wanted to check individual bits in a binary number. The most useful one of these is the concatination operator. 
+These are rarely used as it's not often that individual bits want to be manipulated, maybe you are using some legacy code> An example could be if you wanted to check individual bits in a binary or a hexidecimal number. These operators mostly fail when used on decimal numbers. The concatination operator is the most useful one of these and is nothing like the rest. 
 
 <details>
   <summary>Click to expand!</summary>
@@ -162,6 +160,8 @@ These are rarely used as it's not often that individual bits want to be manipula
 > 
 ### ^ or # - bitwise exculsive OR (XOR)
 >
+### ~ - bitwise NOT
+>
 ### || - concatination 
 > combines by appending multiple fields together. Usually to make a new field from multiple strings.  
 ~~~
@@ -171,8 +171,6 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 
 </details>
 
-:gem::gem::gem:
-
-Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.    
+:gem::gem::gem: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.  :gem::gem::gem:  
 
 ## SQL Functions
