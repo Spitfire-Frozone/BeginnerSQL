@@ -79,7 +79,7 @@ An SQL clause is used to qualify a keyword, allowing those that only fulfil cert
 </details>
 
 ## SQL Operators
-There are four types of SQL operators. logical operators, arithmetic operators, comparison operators and bitwise operators. 
+There are four types of SQL operators: logical operators, arithmetic operators, comparison operators and bitwise operators. 
 
 ### Logical Operators
 A logical operator is used to further discriminate search results in a clause. Each operator creates a sub-query within the main query and returns all the information that is evaluated to be TRUE if the condition set for the sub-query is fulfilled.
@@ -112,6 +112,7 @@ A logical operator is used to further discriminate search results in a clause. E
 ### LIKE
 > evaluated to be TRUE if the operand matches a pattern	(useful for evaluating strings)
 
+</details>
 
 ### Symbolic Operators.
 This is the generic 
@@ -128,3 +129,5 @@ This is the generic
 > groups records that share the same values into summary rows
 ### TOP, LIMIT or ROWNUM
 > specifies the number of records to return
+
+</details>
