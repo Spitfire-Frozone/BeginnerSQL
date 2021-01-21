@@ -38,6 +38,8 @@ SQL statements include special keywords that allow you to perform a variety of a
   
 ### SELECT
 > extracts data from a database
+### AS
+> stores extracted or manipulated data from the database as something else. 
 ### UPDATE 
 > updates data in a database
 ### DELETE 
@@ -149,7 +151,8 @@ SQL can be used to do simple arithmetic, and for that the operators you would no
 </details>
 
 ### Bitwise Operators.
-These are rarely used as it's not often that individual bits want to be manipulated. An example could be if you wanted to check individual bits in a binary number. 
+These are rarely used as it's not often that individual bits want to be manipulated. An example could be if you wanted to check individual bits in a binary number. The most useful one of these is the concatination operator. 
+
 <details>
   <summary>Click to expand!</summary>
 
@@ -157,8 +160,14 @@ These are rarely used as it's not often that individual bits want to be manipula
 > 
 ### | - bitwise OR
 > 
-### ^ - bitwise exculsive OR
+### ^ or # - bitwise exculsive OR (XOR)
 >
+### || - concatination 
+> combines by appending multiple fields together. Usually to make a new field from multiple strings.  
+~~~
+SELECT [field1] || '[####]' || [field2] AS [newfield]
+~~~
+> The central part of this operation allows user inputs to the new text. Here you can add any string you want including just a space. The AS part allows this to be saved for further manipulation.
 
 </details>
 
