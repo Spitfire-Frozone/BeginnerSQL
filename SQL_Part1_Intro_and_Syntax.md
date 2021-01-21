@@ -114,7 +114,7 @@ A logical operator is used to further discriminate search results in a clause. E
 
 </details>
 
-### Symbolic Operators.
+### Comparison Operators.
 This is the generic 
 <details>
   <summary>Click to expand!</summary>
@@ -131,3 +131,43 @@ This is the generic
 > specifies the number of records to return
 
 </details>
+
+### Arithmetic Operators.
+This is the generic 
+<details>
+  <summary>Click to expand!</summary>
+
+### WHERE
+> filters records such that only those that fulfill a specified condition are extracted
+### HAVING
+> filters aggregate records (groups) such that only those that fulfill a specified condition are extracted
+### ORDER BY
+> orders search results
+### GROUP BY
+> groups records that share the same values into summary rows
+### TOP, LIMIT or ROWNUM
+> specifies the number of records to return
+
+</details>
+
+### Bitwise Operators.
+These are rare. 
+<details>
+  <summary>Click to expand!</summary>
+
+### &
+> bitwise AND
+### |
+> bitwise OR
+### ^
+> bitwise exculsive OR
+
+</details>
+
+:shipit:
+~~~
+Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.    
+~~~
+:shipit:
+
+## SQL Functions
