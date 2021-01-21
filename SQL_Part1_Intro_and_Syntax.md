@@ -4,7 +4,7 @@
 -------------------------------------------------------------------------------
 ## Introduction
 
-Structured Query Language, or SQL is a language used to create and manipulate databases and their entries. The Relational DataBase Management System (RDBMS) is the basis for SQL. In RDBMS the data is stored in database objects called *tables*. A database can contain one or more tables. A table is like any other data table. It has a collection of data entries and consists of columns and rows. However columns are called *fields* and rows are called *records*. A record will contain information from a variety of different attributes. Each field will contain the entire collection of information about a particular attribute. The number of entries in a table is given by the number of records.
+Structured Query Language, or SQL is a language used to create and manipulate databases and their entries. The Relational DataBase Management System (RDBMS) is the basis for SQL. In RDBMS the data is stored in database objects called *tables*. A database can contain one or more tables. A table is like any other data table. It has a collection of data entries and consists of columns and rows. However columns are called *fields* and rows are called *records*. A record will contain information from a variety of different attributes. Each field will contain the entire collection of information about a particular attribute. The number of entries in a table is given by the number of records. Terminology I made up now. I will refer to the intersection between fields and records as *domains*. A record will have as many domains as there are fields, but not all domains will have information in them.
 
 ## Using SQL in a Website
 To build a website that shows data from a database, you will need:
@@ -79,3 +79,52 @@ An SQL clause is used to qualify a keyword, allowing those that only fulfil cert
 </details>
 
 ## SQL Operators
+There are four types of SQL operators. logical operators, arithmetic operators, comparison operators and bitwise operators. 
+
+### Logical Operators
+A logical operator is used to further discriminate search results in a clause. Each operator creates a sub-query within the main query and returns all the information that is evaluated to be TRUE if the condition set for the sub-query is fulfilled.
+
+<details>
+  <summary>Some examples are:</summary>
+
+### AND 
+> a logical AND. Is TRUE if all conditions separated by AND are TRUE
+### OR	
+> a logical AND. Is TRUE if any of the conditions separated by OR is TRUE	
+### NOT	
+> Displays a record if the condition(s) is NOT TRUE	
+
+
+### ALL	 
+> is followed by a set of conditions and returns the records (or part of them) that meet all of the conditions specified.	
+### ANY 
+> is followed by a set of conditions and returns the records (or part of them) that meet at least one of the conditions specified.
+### SOME
+>  functionally identical to ANY (from what I can gather)
+
+
+### BETWEEN	
+> evaluated to be TRUE if the information in the domain (also referred to an operand is operated on) is within the a specified range of comparisons	
+### EXISTS
+> evaluated to be TRUE if the subquery returns at least one record	
+### IN
+> evaluated to be TRUE if the information in a domain (operand) is equal to one of a list of expressions	
+### LIKE
+> evaluated to be TRUE if the operand matches a pattern	(useful for evaluating strings)
+
+
+### Symbolic Operators.
+This is the generic 
+<details>
+  <summary>Click to expand!</summary>
+
+### WHERE
+> filters records such that only those that fulfill a specified condition are extracted
+### HAVING
+> filters aggregate records (groups) such that only those that fulfill a specified condition are extracted
+### ORDER BY
+> orders search results
+### GROUP BY
+> groups records that share the same values into summary rows
+### TOP, LIMIT or ROWNUM
+> specifies the number of records to return
