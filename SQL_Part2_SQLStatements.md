@@ -23,3 +23,5 @@ If you want only unique entries, the SELECT keyword can be qualified by the keyw
 ~~~
 SELECT DISTINCT [field_1, field_2] FROM [table]; 
 ~~~
+
+### JOIN
