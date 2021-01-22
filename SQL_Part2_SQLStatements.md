@@ -25,3 +25,7 @@ SELECT DISTINCT [field_1, field_2] FROM [table];
 ~~~
 
 ### JOIN
+
+### CASE
+
+## SQL Stored Procedures

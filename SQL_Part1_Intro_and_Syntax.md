@@ -14,6 +14,26 @@ To build a website that shows data from a database, you will need:
 - to use SQL to obtain the data you want to show
 - to use HTML / CSS to style the page
 
+## General Syntax Points
+:closed_book: Comments are made with two dashed lines -- 
+
+:green_book: Domains that are empty can be identifies and manipulated by using the NULL keyword 
+
+:blue_book: If you want to make code easy to read, you might want to rename tables or records. These can be done b assigning them an alias for the duration of your query. 
+
+:orange_book: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
+
+| Symbol     |           | Description                                    | Example                                                                                                                                |
+|------------|-----------|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| SQL Server | MS Access |                                                |                                                                                                                                        |
+|      *     |     %     | Represents zero or more characters             | ma* => ma, map, magaluf69, ... <br>m*p => mp, map, m1shap, ...<br><br>ma% => ma, map, magaluf69, ... <br>m%p => mp, map, m1shap, ...   |
+|      ?     |     _     | Represents a single character                  | m?p => map, mbp ... m0p, ...  <br>??mp => camp, bump, 80mp, ...<br><br>m_p => map, mbp ... m0p, ...  <br>__mp => camp, bump, 80mp, ... |
+|     []     |     []    | Represents any one character in these brackets | m[ao]p => map, mop<br>[bc][au]mp => bamp, bump, camp, cump                                                                             |
+|     [!]    |    [^]    | Represents any character not in the brackets   | m[^bcdefghijklmnopqrstuvwxyz1234567890]p = map <br>m[!bcdefghijklmnopqrstuvwxyz1234567890]p = map                               |
+|      -     |     -     | Represents a range of characters               | m[a-f]p => map, mbp, mcp, mdp, mep, mfp <br>m[0-5]p => m0p, m1p, m2p, m3p, m4p, m5p                                                    |
+|      #     |           | Represents any numeric character               | 12# => 120 - 129 <br>12## => 1200 - 1299                                                                                               |                                                                   |
+
+
 # SQL Statements
 Databases are navigated using SQL statements. In the most basic form they are sets of commands consisting of keywords, clauses, operators, functions and so on performing actions on tables. Some database systems require a semicolon at the end of each SQL statement, as they allow multiple statements to be executed in a single call to the server. SQL statements can span across multiple lines such that all four statements below are syntaxically valid. 
 
@@ -36,8 +56,8 @@ SQL statements include special keywords that allow you to perform a variety of a
 <details>
   <summary>Click to expand!</summary>
   
-### SELECT
-> extracts data from a database
+### SELECT 
+> extracts data from a database 
 ### UPDATE 
 > updates data in a database
 ### DELETE 
@@ -48,8 +68,12 @@ SQL statements include special keywords that allow you to perform a variety of a
 > modifies a database
 ### CREATE TABLE 
 > creates a new table
+### SELECT INTO
+> creates a new table with information from the selected table
 ### INSERT INTO
 > inserts new records into a table 
+### INSERT INTO SELECT
+>  copies data from a table and inserts it into an existing table
 ### ALTER TABLE 
 > modifies a table
 ### DROP TABLE 
@@ -58,6 +82,8 @@ SQL statements include special keywords that allow you to perform a variety of a
 > creates an index (search key)
 ### DROP INDEX 
 > deletes an index
+### CASE
+> allows multiple conditions to be tested sequentially outputting a value when the first condition it comes across is true. It uses a WHEN-THEN-ELSE which is akin to IF-THEN-ELSE structures in other languages. 
 
 </details>
 
@@ -80,7 +106,7 @@ An SQL clause is used to qualify a keyword, allowing those that only fulfil cert
 ### TOP, LIMIT or ROWNUM
 > specifies the number of records to return
 ### JOIN
-> combines rows from two or more different tables, based on a related column between them
+> combines rows from two or more different tables, based on a related column between them. There are 5 types of join.
 ### ON 
 > specifies the target of a join 
 
@@ -93,7 +119,7 @@ There are four types of SQL operators: logical operators, arithmetic operators, 
 A logical operator is used to further discriminate search results in a clause. Each operator creates a sub-query within the main query and returns all the information that is evaluated to be TRUE if the condition set for the sub-query is fulfilled.
 
 <details>
-  <summary>Some examples are:</summary>
+  <summary>Click to expand for some examples!</summary>
 
 ### AND 
 > a logical AND. Is TRUE if all conditions separated by AND are TRUE
@@ -126,7 +152,7 @@ A logical operator is used to further discriminate search results in a clause. E
 ### Comparison Operators.
 Does what it says on the tin. These are the set of operators that allow you to compare domains. You are already familiar most of these 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Click to expand for some examples!</summary>
 
 #### =	Equal to	
 #### >	Greater than	
@@ -141,7 +167,7 @@ Does what it says on the tin. These are the set of operators that allow you to c
 SQL can be used to do simple arithmetic, and for that the operators you would normally use for simple sums are used here. There is a catch. Since SQL doesn't have an express type attribute for items returned values may not be correct (this is mainly only a concern if the division operator is being used). If the input is all integers for example, it will always output an integer and any remainders will be discarded. Since SQL automatically detects number types, a float can always be specified by entering a number with a decimal point. i.e 30.0 instead of 30. If any one of the numbers in a calculation is a float, however, the a answer will be a float.
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Click to expand for some examples!</summary>
 
 ### +	Add	
 ### -	Subtract	
@@ -157,7 +183,7 @@ SQL can be used to do simple arithmetic, and for that the operators you would no
 These are rarely used as it's not often that individual bits want to be manipulated, maybe you are using some legacy code> An example could be if you wanted to check individual bits in a binary or a hexidecimal number. These operators mostly fail when used on decimal numbers. The concatination operator is the most useful one of these and is nothing like the rest. 
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Click to expand for some examples!</summary>
 
 ### & - bitwise AND
 > 
@@ -182,7 +208,7 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 An SQL function is a quick way of doing calculations with fields, they take an    
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Click to expand for some examples!</summary>
 
 ### MIN(field)
 > returns the minimum value in the selected field
@@ -199,24 +225,10 @@ An SQL function is a quick way of doing calculations with fields, they take an
 ### SUM(numeric_field)
 > returns the sum of all of the values in a numeric field
 
+### ISNULL(field, [value]), IFNULL(field, [value])
+> checks if a domain is empty, and if so replaces it in a calculation with [value]
+
+### COALESCE(field)
+> reads items in a field iteratively and returns the first non-null value
+
 </details>
-
-## General Syntax Points
-:closed_book: Comments are made with two dashed lines -- 
-
-:green_book: Domains that are empty can be identifies and manipulated by using the NULL keyword 
-
-:blue_book If you want to make code easy to read, you might want to rename tables or records. These can be done b assigning them an alias for the duration of your query. 
-
-:orange_book: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
-
-| Symbol     |           | Description                                    | Example                                                                                                                                |
-|------------|-----------|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| SQL Server | MS Access |                                                |                                                                                                                                        |
-|      *     |     %     | Represents zero or more characters             | ma* => ma, map, magaluf69, ... <br>m*p => mp, map, m1shap, ...<br><br>ma% => ma, map, magaluf69, ... <br>m%p => mp, map, m1shap, ...   |
-|      ?     |     _     | Represents a single character                  | m?p => map, mbp ... m0p, ...  <br>??mp => camp, bump, 80mp, ...<br><br>m_p => map, mbp ... m0p, ...  <br>__mp => camp, bump, 80mp, ... |
-|     []     |     []    | Represents any one character in these brackets | m[ao]p => map, mop<br>[bc][au]mp => bamp, bump, camp, cump                                                                             |
-|     [!]    |    [^]    | Represents any character not in the brackets   | m[^bcdefghijklmnopqrstuvwxyz1234567890]p = map <br>m[!bcdefghijklmnopqrstuvwxyz1234567890]p = map                               |
-|      -     |     -     | Represents a range of characters               | m[a-f]p => map, mbp, mcp, mdp, mep, mfp <br>m[0-5]p => m0p, m1p, m2p, m3p, m4p, m5p                                                    |
-|      #     |           | Represents any numeric character               | 12# => 120 - 129 <br>12## => 1200 - 1299                                                                                               |                                                                   |
-
