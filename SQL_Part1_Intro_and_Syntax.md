@@ -176,7 +176,7 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 
 </details>
 
-:gem::gem::gem: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.  :gem::gem::gem:  
+:snowboarder: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within. 
 
 ## SQL Functions
 An SQL function is a quick way of doing calculations with fields, they take an    
@@ -201,12 +201,14 @@ An SQL function is a quick way of doing calculations with fields, they take an
 
 </details>
 
-## General Syntax
-:gem::gem: Comments are made with two dashed lines -- 
+## General Syntax Points
+:closed_book: Comments are made with two dashed lines -- 
 
-:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword 
+:green_book: Domains that are empty can be identifies and manipulated by using the NULL keyword 
 
-:gem::gem: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
+:blue_book If you want to make code easy to read, you might want to rename tables or records. These can be done b assigning them an alias for the duration of your query. 
+
+:orange_book: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
 
 | Symbol     |           | Description                                    | Example                                                                                                                                |
 |------------|-----------|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
@@ -214,7 +216,7 @@ An SQL function is a quick way of doing calculations with fields, they take an
 |      *     |     %     | Represents zero or more characters             | ma* => ma, map, magaluf69, ... <br>m*p => mp, map, m1shap, ...<br><br>ma% => ma, map, magaluf69, ... <br>m%p => mp, map, m1shap, ...   |
 |      ?     |     _     | Represents a single character                  | m?p => map, mbp ... m0p, ...  <br>??mp => camp, bump, 80mp, ...<br><br>m_p => map, mbp ... m0p, ...  <br>__mp => camp, bump, 80mp, ... |
 |     []     |     []    | Represents any one character in these brackets | m[ao]p => map, mop<br>[bc][au]mp => bamp, bump, camp, cump                                                                             |
-|     [!]    |    [^]    | Represents any character not in the brackets   | m[^bcdfghijklmnopqrstuvwxyz1234567890]p = map, mep<br>m[!bcdfghijklmnopqrstuvwxyz1234567890]p = map, mep                               |
+|     [!]    |    [^]    | Represents any character not in the brackets   | m[^bcdefghijklmnopqrstuvwxyz1234567890]p = map <br>m[!bcdefghijklmnopqrstuvwxyz1234567890]p = map                               |
 |      -     |     -     | Represents a range of characters               | m[a-f]p => map, mbp, mcp, mdp, mep, mfp <br>m[0-5]p => m0p, m1p, m2p, m3p, m4p, m5p                                                    |
 |      #     |           | Represents any numeric character               | 12# => 120 - 129 <br>12## => 1200 - 1299                                                                                               |                                                                   |
 
