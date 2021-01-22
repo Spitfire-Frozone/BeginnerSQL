@@ -6,7 +6,7 @@
 
 Structured Query Language, or SQL is a language used to create and manipulate databases and their entries. The Relational DataBase Management System (RDBMS) is the basis for SQL. In RDBMS the data is stored in database objects called *tables*. A database can contain one or more tables. A table is like any other data table. It has a collection of data entries and consists of columns and rows. However columns are called *fields* and rows are called *records*. A record will contain information from a variety of different attributes. Each field will contain the entire collection of information about a particular attribute. The number of entries in a table is given by the number of records. Terminology I made up now. I will refer to the intersection between fields and records as *domains*. A record will have as many domains as there are fields, but not all domains will have information in them.
 
-## Using SQL in a Website
+## Website-Based SQL
 To build a website that shows data from a database, you will need:
 
 - a RDBMS database program (i.e. MS Access, SQL Server, MySQL)
@@ -29,8 +29,6 @@ SELECT [field(s)]
 FROM [table]
 ~~~
 
-:gem::gem: Comments are made with two dashed lines -- :gem::gem:
-
 Each component of what can appear in a SQL Statement will be outlined below. For details on how to construct SQL statements see SQL_Part2_SQLStatements.md. 
 
 ## SQL Keywords
@@ -40,8 +38,6 @@ SQL statements include special keywords that allow you to perform a variety of a
   
 ### SELECT
 > extracts data from a database
-### AS
-> stores extracted or manipulated data from the database as something else. 
 ### UPDATE 
 > updates data in a database
 ### DELETE 
@@ -63,14 +59,14 @@ SQL statements include special keywords that allow you to perform a variety of a
 
 </details>
 
-:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword :gem::gem:
-
 ## SQL Clauses
 An SQL clause is used to qualify a keyword, allowing those that only fulfil certain conditions to be obtained. Clauses can also be used to group or order search results. A list of some of more common ones can be seen in the expandable list below. 
 
 <details>
   <summary>Click to expand!</summary>
 
+### AS
+> stores extracted or manipulated data from the database as something else.
 ### WHERE
 > filters records such that only those that fulfill a specified condition are extracted
 ### HAVING
@@ -81,6 +77,10 @@ An SQL clause is used to qualify a keyword, allowing those that only fulfil cert
 > groups records that share the same values into summary rows
 ### TOP, LIMIT or ROWNUM
 > specifies the number of records to return
+### JOIN
+> combines rows from two or more different tables, based on a related column between them
+### ON 
+> specifies the target of a join 
 
 </details>
 
@@ -99,7 +99,8 @@ A logical operator is used to further discriminate search results in a clause. E
 > a logical AND. Is TRUE if any of the conditions separated by OR is TRUE	
 ### NOT	
 > Displays a record if the condition(s) is NOT TRUE	
-
+### UNION
+> combines the results from multiple SELECT statements
 
 ### ALL	 
 > is followed by a set of conditions and returns the records (or part of them) that meet all of the conditions specified.	
@@ -176,6 +177,7 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 :gem::gem::gem: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.  :gem::gem::gem:  
 
 ## SQL Functions
+An SQL function is a quick way of doing calculations with fields, they take an    
 
 <details>
   <summary>Click to expand!</summary>
@@ -185,8 +187,20 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 
 ### MAX(field)
 > returns the maximum value in the selected field
-COUNT(field)
-AVG(field)
-SUM(field)
+
+### COUNT(field/criterion)
+> return the number of records that filfil certain criteria, or the number of entries in a given field
+
+### AVG(numeric_field)
+> returns the mean value of a field consting of numbers 
+
+### SUM(numeric_field)
+> returns the sum of all of the values in a numeric field
 
 </details>
+
+## General Syntax
+:gem::gem: Comments are made with two dashed lines -- :gem::gem:
+:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword :gem::gem:
+Talk about SQL wildcards here 0 special characters to replace parts of a string. ,'asterisks', '?' , '[]' e.t.c
+
