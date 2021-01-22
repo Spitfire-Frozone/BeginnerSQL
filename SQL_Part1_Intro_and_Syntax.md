@@ -41,13 +41,15 @@ SQL statements include special keywords that allow you to perform a variety of a
 ### UPDATE 
 > updates data in a database
 ### DELETE 
-> inserts new data into a database
+> deletes data from a database
 ### CREATE DATABASE 
 > creates a new database
 ### ALTER DATABASE 
 > modifies a database
 ### CREATE TABLE 
 > creates a new table
+### INSERT INTO
+> inserts new records into a table 
 ### ALTER TABLE 
 > modifies a table
 ### DROP TABLE 
@@ -200,7 +202,19 @@ An SQL function is a quick way of doing calculations with fields, they take an
 </details>
 
 ## General Syntax
-:gem::gem: Comments are made with two dashed lines -- :gem::gem:
-:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword :gem::gem:
-Talk about SQL wildcards here 0 special characters to replace parts of a string. ,'asterisks', '?' , '[]' e.t.c
+:gem::gem: Comments are made with two dashed lines -- 
+
+:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword 
+
+:gem::gem: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
+
+| Symbol     |           | Description                                    | Example                                                                                                                        |
+|------------|-----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| SQL Server | MS Access |                                                |                                                                                                                                |
+|      *     |     %     | Represents zero or more characters             | ma* => ma, map, magaluf69, ... \| m*p => mp, map, m1shap, ...<br>ma% => ma, map, magaluf69, ... \| m%p => mp, map, m1shap, ... |
+|      ?     |     _     | Represents a single character                  | m?p => map, mbp ... m0p, ... \| ??mp => camp, bump, 80mp, ...<br>m_p => map, mbp ... m0p, ... \| __mp => camp, bump, 80mp, ... |
+|     []     |     []    | Represents any one character in these brackets | m[ao]p => map, mop<br>[bc][au]mp => bamp, bump, camp, cump                                                                     |
+|     [!]    |    [^]    | Represents any character not in the brackets   | m[^bcdfghijklmnpqrstuvwxyz123456789]p = map, mep, mop, m0p<br>m[!bcdfghijklmnpqrstuvwxyz123456789]p = map, mep, mop, m0p       |
+|      -     |     -     | Represents a range of characters               | m[a-f]p => map, mbp, mcp, mdp, mep, mfp <br>m[0-5]p => m0p, m1p, m2p, m3p, m4p, m5p                                            |
+|      #     |           | Represents any numeric character               | 12# => 120,121,122,123,124,125,126,127,128,129                                                                                 |
 
