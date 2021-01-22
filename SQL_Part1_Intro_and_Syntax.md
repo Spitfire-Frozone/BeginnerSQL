@@ -1,6 +1,6 @@
 # Beginners SQL Part 1 Introduction and Syntax #
 
-## Last Edited: 19-01-2021
+## Last Edited: 22-01-2021
 -------------------------------------------------------------------------------
 ## Introduction
 
