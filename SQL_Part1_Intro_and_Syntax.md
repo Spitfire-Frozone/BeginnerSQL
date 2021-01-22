@@ -19,7 +19,7 @@ To build a website that shows data from a database, you will need:
 
 :green_book: Domains that are empty can be identifies and manipulated by using the NULL keyword 
 
-:blue_book: If you want to make code easy to read, you might want to rename tables or records. These can be done b assigning them an alias for the duration of your query. 
+:blue_book: If you want to make code easy to read, you might want to rename tables or records. These can be done by assigning them an alias for the duration of your query. 
 
 :orange_book: SQL wildcards are special characters used to replace parts of a string. These are useful for searches. These are different depending on what you are using to code SQL. 
 
@@ -205,7 +205,7 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 :snowboarder: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within. 
 
 ## SQL Functions
-An SQL function is a quick way of doing calculations with fields, they take an    
+An SQL function is a quick way of doing calculations with fields, they take a given field as an argument and output some value.    
 
 <details>
   <summary>Click to expand for some examples!</summary>
