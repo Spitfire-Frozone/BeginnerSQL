@@ -63,6 +63,8 @@ SQL statements include special keywords that allow you to perform a variety of a
 
 </details>
 
+:gem::gem: Domains that are empty can be identifies and manipulated by using the NULL keyword :gem::gem:
+
 ## SQL Clauses
 An SQL clause is used to qualify a keyword, allowing those that only fulfil certain conditions to be obtained. Clauses can also be used to group or order search results. A list of some of more common ones can be seen in the expandable list below. 
 
@@ -174,3 +176,17 @@ SELECT [field1] || '[####]' || [field2] AS [newfield]
 :gem::gem::gem: Most of the symbolic operations that make up the latter two catagories can be appended by an equals sign to create a *compound* operator. A compound operator is very useful for quickly accessing domains and editing the information within.  :gem::gem::gem:  
 
 ## SQL Functions
+
+<details>
+  <summary>Click to expand!</summary>
+
+### MIN(field)
+> returns the minimum value in the selected field
+
+### MAX(field)
+> returns the maximum value in the selected field
+COUNT(field)
+AVG(field)
+SUM(field)
+
+</details>
