@@ -26,6 +26,16 @@ If you want to give a temporary name to a field that only exists for the duratio
 SELECT [field] FROM [table] 
 AS [field_name]; 
 ~~~
+If you want even more control over this special data, you can create a new table from selected data in one of several ways.
+
+### SELECT INTO
+~~~
+SELECT field_1, field_2, field_3, ...
+INTO newtable [IN external_database]
+FROM oldtable
+WHERE condition;
+~~~
+The IN clause is there in case the new table needs to be created in a different database to the one that the information is in. 
 
 ### JOIN
 
