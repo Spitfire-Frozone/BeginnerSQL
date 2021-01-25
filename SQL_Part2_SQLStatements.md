@@ -6,7 +6,7 @@
 Now we know what can make up some SQL statements, below I shall detail how to use some of the common keywords.
 
 ### SELECT
-Select is the be-all and end-all of keywords. Most if not all SQL statements that retrive information from a database will start with you selecting some level of information from a table.
+SELECT is the be-all and end-all of keywords. Most if not all SQL statements that retrive information from a database will start with you selecting some level of information from a table.
 ~~~
 SELECT [field(s)] 
 FROM [table]; 
@@ -26,9 +26,10 @@ If you want to give a temporary name to a field that only exists for the duratio
 SELECT [field] FROM [table] 
 AS [field_name]; 
 ~~~
-If you want even more control over this special data, you can create a new table from selected data in one of several ways.
+If you want even more control over this special data, you can create a new table from selected data using SELECT INTO.
 
 ### SELECT INTO
+SELECT INTO copies data from one table into a new table. It can be used to copy data at a field level, and combined with other keywords to allow copying of particular domains that fulfil some criteria.
 ~~~
 SELECT field_1, field_2, field_3, ...
 INTO newtable [IN external_database]
@@ -36,6 +37,9 @@ FROM oldtable
 WHERE condition;
 ~~~
 The IN clause is there in case the new table needs to be created in a different database to the one that the information is in. 
+
+### INSERT
+This means that we neatly segway into another keyword. INSERT is used to input data into a table that already exists. 
 
 ### JOIN
 
