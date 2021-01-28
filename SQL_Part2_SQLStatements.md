@@ -38,8 +38,20 @@ WHERE condition;
 ~~~
 The IN clause is there in case the new table needs to be created in a different database to the one that the information is in. 
 
-### INSERT
-This means that we neatly segway into another keyword. INSERT is used to input data into a table that already exists. 
+### INSERT INTO
+This means that we neatly segway into another keyword. INSERT (INTO) is used to input data into a table that already exists. You can either enter the data by record, highlighting the fields you want to insert information into and giving their values like so
+~~~
+INSERT INTO TableName (field_1, field_2, field_3, ...)
+VALUES ('value_1','value_2', 'value_3', ...);
+~~~
+However if you plan on making an entry into every domain in a record, the specification of the fields is unnecessary. 
+~~~
+INSERT INTO TableName 
+VALUES ('value_1','value_2', 'value_3', ...);
+~~~
+If the data you want to enter into an existing table comes from another table itself then you can use INSERT INTO SELECT instead. 
+
+### INSERT INTO SELECT
 
 ### JOIN
 
