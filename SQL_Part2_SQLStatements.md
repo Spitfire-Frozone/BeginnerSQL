@@ -42,16 +42,26 @@ The IN clause is there in case the new table needs to be created in a different 
 This means that we neatly segway into another keyword. INSERT (INTO) is used to input data into a table that already exists. You can either enter the data by record, highlighting the fields you want to insert information into and giving their values like so
 ~~~
 INSERT INTO TableName (field_1, field_2, field_3, ...)
-VALUES ('value_1','value_2', 'value_3', ...);
+VALUES ('value_1', 'value_2', 'value_3', ...);
 ~~~
 However if you plan on making an entry into every domain in a record, the specification of the fields is unnecessary. 
 ~~~
 INSERT INTO TableName 
-VALUES ('value_1','value_2', 'value_3', ...);
+VALUES ('value_1', 'value_2', 'value_3', ...);
 ~~~
 If the data you want to enter into an existing table comes from another table itself then you can use INSERT INTO SELECT instead. 
 
 ### INSERT INTO SELECT
+Using this allows for you to copy all or some of the fields from one table to another that already exists. By adding a WHERE clause, you can filter the records in table1 in all fields that will be inserted into table2.
+~~~
+INSERT INTO table_2 (field_1(table_2), field_2(table_2), field_3(table_2), ...)
+SELECT field_1(table_1), field_2(table_1), field_3(table_1), ... [or * if you want them all]
+FROM table1
+WHERE condition;
+~~~
+
+### WHERE
+The WHERE condition allows filtering of records by asking if they pass certain requirements
 
 ### JOIN
 
