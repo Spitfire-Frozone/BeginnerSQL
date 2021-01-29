@@ -1,6 +1,6 @@
-# Beginners SQL Part 2 SQL Keywords and Statements #
+# Beginners SQL Part 2 SQL Keywords and Statements (Table-Level)#
 
-## Last Edited: 22-01-2021
+## Last Edited: 29-01-2021
 -------------------------------------------------------------------------------
 ## Constructing SQL statements
 Now we know what can make up some SQL statements, below I shall detail how to use some of the common keywords.
@@ -61,9 +61,13 @@ WHERE condition;
 ~~~
 
 ### WHERE
-The WHERE condition allows filtering of records by asking if they pass certain requirements
+The WHERE condition allows filtering of records by asking if targets of a selection pass certain requirements. These requirements or *conditions* mostly take the form of A [operator (non-logical)] B and can be expanded upon by using a logical operators to conjoin more conditions together. e.g WHERE x > 30 OR Y = 12. 
 
 ### JOIN
+
+### UPDATE
+
+### DELETE
 
 ### CASE
 
